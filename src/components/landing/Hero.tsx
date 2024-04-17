@@ -21,7 +21,7 @@ const Hero = () => {
 			<div className='flex flex-col gap-3 text-justify'>
 				<h1 className='text-lg'>Hi, I&apos;m Advith Krishnan. </h1>
 				<p>
-					I was born and raised in <b><i>Chennai, India.</i></b><br/><br/>
+					I was born and raised in <b><i>Chennai, India.</i></b><br/>
 					I have been interested in neuroscience since the age of 15
 					and spent most of my life, reading and adoring the grand scheme of dynamics 
 					in the brain that invoke thought and perception.<br/><br/>
@@ -34,6 +34,7 @@ const Hero = () => {
 				</p>
 				<hr className='w-10' />
 				<div className='flex flex-col'>
+					<b>Contact me:</b>
 					<Link
 						href={`mailto:${EMAIL}`}
 						className='hover:underline underline-offset-2'
