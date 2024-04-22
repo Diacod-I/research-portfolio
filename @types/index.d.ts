@@ -1,4 +1,4 @@
-type Research = {
+type ResearchType = {
 	title: string;
 	slug: string;
 	description: string;
