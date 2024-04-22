@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { EMAIL, MOBILE } from '@/constants/socials';
-import Footer from '@/components/layouts/Footer';
+import Socials from '../reusable/Socials';
 
 const Hero = () => {
 	return (
@@ -21,34 +21,43 @@ const Hero = () => {
 			<div className='flex flex-col gap-3 text-justify'>
 				<h1 className='text-lg'>Hi, I&apos;m Advith Krishnan. </h1>
 				<p>
-					I was born and raised in <b><i>Chennai, India.</i></b><br/>
+					I was born and raised in{' '}
+					<b>
+						<i>Chennai, India.</i>
+					</b>
+					<br />
 					I have been interested in neuroscience since the age of 15
-					and spent most of my life, reading and adoring the grand scheme of dynamics 
-					in the brain that invoke thought and perception.<br/><br/>
-					I am pursuing Bachelor of Technology at <b><i>SRM Institute of Science &
-					Technology</i></b>, studying Artificial Intelligence.<br/>
-					<br/>Currently, I am working on spiking neural networks, neuro-dynamical
-					systems and computational neuroscience.
-
-
+					and spent most of my life, reading and adoring the grand
+					scheme of dynamics in the brain that invoke thought and
+					perception.
+					<br />
+					<br />I am pursuing Bachelor of Technology at{' '}
+					<b>
+						<i>SRM Institute of Science & Technology</i>
+					</b>
+					, studying Artificial Intelligence.
+					<br />
+					<br />
+					Currently, I am working on spiking neural networks,
+					neuro-dynamical systems and computational neuroscience.
 				</p>
 				<hr className='w-10' />
 				<div className='flex flex-col'>
 					<b>Contact me:</b>
 					<Link
 						href={`mailto:${EMAIL}`}
-						className='hover:underline underline-offset-2'
+						className='hover:underline underline-offset-2 w-fit'
 					>
 						{EMAIL}
 					</Link>
 					<Link
 						href={`tel:${MOBILE}`}
-						className='hover:underline underline-offset-2 font-["PT_Sans"]'
+						className='hover:underline underline-offset-2 font-["PT_Sans"] w-fit'
 					>
 						{MOBILE}
 					</Link>
 				</div>
-			<Footer />
+				<Socials />
 			</div>
 		</section>
 	);

@@ -1,5 +1,6 @@
-import Navbar from '@/components/layouts/Navbar';
 import type { Metadata } from 'next';
+import Footer from '@/components/layouts/Footer';
+import Navbar from '@/components/layouts/Navbar';
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -15,6 +16,7 @@ export default function StaticRootLayout({
 		<main className={`bg-[#202124] w-full min-h-screen text-white`}>
 			<Navbar />
 			{children}
+			<Footer />
 		</main>
 	);
 }
