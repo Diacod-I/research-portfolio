@@ -7,7 +7,6 @@ interface Props extends React.HTMLAttributes<HTMLLIElement> {
 }
 
 const ResearchCard: React.FC<Props> = ({ research }) => {
-	console.log(research);
 	return (
 		<li className='w-full'>
 			<Link
