@@ -1,6 +1,8 @@
-type Research = {
+type ResearchType = {
+	_id: string;
 	title: string;
-	slug: string;
+	slug: { current: string };
 	description: string;
-	body: any;
+	publisehdAt: string; // Date
+	body?: any;
 };

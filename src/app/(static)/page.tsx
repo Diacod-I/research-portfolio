@@ -1,5 +1,9 @@
 import React from 'react';
+
 import Hero from '@/components/landing/Hero';
+import { getDefaultMetadata } from '@/lib/metadata';
+
+export const metadata = getDefaultMetadata();
 
 const Home = () => {
 	return (
@@ -8,6 +12,5 @@ const Home = () => {
 		</div>
 	);
 };
-
 
 export default Home;
