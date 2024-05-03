@@ -16,10 +16,15 @@ export const DEFAULT_METADATA = {
 		title: 'Advith Krishnan',
 		description:
 			'Chennai-based Neuroscience Enthusiast & AI Student at SRM IST',
+		images: ['/images/advith-work.jpg'],
+		type: 'website',
+		countryName: 'India',
 	},
 	twitter: {
 		title: 'Advith Krishnan',
 		description:
 			'Chennai-based Neuroscience Enthusiast & AI Student at SRM IST',
+		images: ['/images/advith-work.jpg'],
+		card: 'summary_large_image',
 	},
 } as Metadata;

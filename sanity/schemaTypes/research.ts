@@ -15,6 +15,7 @@ export default defineType({
 			name: 'slug',
 			title: 'Slug',
 			type: 'slug',
+			validation: (Rule) => Rule.required(),
 			options: {
 				source: 'title',
 				maxLength: 96,
@@ -24,6 +25,12 @@ export default defineType({
 			name: 'description',
 			title: 'Description',
 			type: 'text',
+			validation: (Rule) => Rule.required(),
+		}),
+		defineField({
+			name: 'publisehdAt',
+			title: 'Published At',
+			type: 'datetime',
 			validation: (Rule) => Rule.required(),
 		}),
 		defineField({

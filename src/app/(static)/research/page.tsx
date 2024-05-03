@@ -1,15 +1,32 @@
 import React from 'react';
+
 import { sanityFetch } from '../../../../sanity/lib/fetch';
-import { ALL_RESEARCH_QUERY } from '../../../../sanity/lib/queries';
+import { RESEARCHS_QUERY } from '../../../../sanity/lib/queries';
+import { getDefaultMetadata } from '@/lib/metadata';
+import ResearchCard from '@/components/research/research-card';
+
+const title = "Advith Krisnan's Research Work";
+export const metadata = getDefaultMetadata({
+	title,
+	openGraph: { title },
+	twitter: { title },
+});
 
 const Research = async () => {
 	const researches = await sanityFetch<Array<ResearchType>>({
-		query: ALL_RESEARCH_QUERY,
+		query: RESEARCHS_QUERY,
 	});
 
-	console.log(researches);
-
-	return <div className='w-full max-w-3xl mx-auto p-4 lg:p-8'></div>;
+	return (
+		<div className='w-full max-w-3xl mx-auto p-4 lg:p-8'>
+			<h1 className='text-lg'>Research Work</h1>
+			<ul className='flex flex-col mt-8 gap-4'>
+				{researches.map((research) => (
+					<ResearchCard research={research} key={research._id} />
+				))}
+			</ul>
+		</div>
+	);
 };
 
 export default Research;
