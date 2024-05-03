@@ -9,6 +9,7 @@ export const PORTFOLIO_URL =
 		: 'http://localhost:3000';
 
 export const DEFAULT_METADATA = {
+	metadataBase: new URL(PORTFOLIO_URL),
 	title: 'Advith Krishnan',
 	description:
 		'Chennai-based Neuroscience Enthusiast & AI Student at SRM IST',
