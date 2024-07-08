@@ -9,7 +9,7 @@ const Hero = () => {
 		<section className='grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16'>
 			<div className='w-full'>
 				<Image
-					src='/images/Advith_Krishnan.jpg'
+					src='/images/Advith_Krishnan.png'
 					width={100}
 					height={100}
 					alt='Advith'
