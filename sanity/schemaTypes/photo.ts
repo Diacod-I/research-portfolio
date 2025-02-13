@@ -1,36 +1,35 @@
-import {defineField, defineType} from 'sanity';
+import { defineField, defineType } from 'sanity';
 
 export default defineField({
-    name: 'photos',
-    title: 'Image Gallery',
-    description:
-        'My photo gallery including images, captions, and alternative text.',
-    fields: [
-        defineField({
-        name: 'photo',
-        title: 'Photo',
-        type: 'image',
-        options: {
-            hotspot: true,
-        },
-        validation: (Rule) => Rule.required()}),
-        defineField({
-            name: 'alt',
-            title: 'Alternative Text',
-            type: 'string',
-        validation: (Rule) => Rule.required()
-        }),
-        defineField({
-            name: 'caption',
-            title: 'Caption',
-            type: 'string',
-        validation: (Rule) => Rule.required()
-        }
-    )
-
-    ]
-
-})
+	name: 'photos',
+	title: 'Image Gallery',
+	type: 'document',
+	description:
+		'My photo gallery including images, captions, and alternative text.',
+	fields: [
+		defineField({
+			name: 'photo',
+			title: 'Photo',
+			type: 'image',
+			options: {
+				hotspot: true,
+			},
+			validation: (Rule) => Rule.required(),
+		}),
+		defineField({
+			name: 'alt',
+			title: 'Alternative Text',
+			type: 'string',
+			validation: (Rule) => Rule.required(),
+		}),
+		defineField({
+			name: 'caption',
+			title: 'Caption',
+			type: 'string',
+			validation: (Rule) => Rule.required(),
+		}),
+	],
+});
 
 /*
     type: 'array',
